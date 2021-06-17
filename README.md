@@ -15,3 +15,62 @@ Write a command line application in any language that accepts a json string of k
 Write a second command line application that sends to STDOUT statistics about the stored records, including the maximum and minimum values for numerical inputs, the most common responses for string inputs, and anything else you think might be relevant.
 
 Instructions for installing and running your applications should be added to this README file.
+
+### Dependencies
+
+Ruby... that's it. Super simple!
+
+### Commands
+
+#### anna_found.rb
+
+The string generator will record the values that were supplied in a `history.txt` file instead of pushing data into a database.
+
+To run the string generator, run `anna_found.rb` like this:
+
+```
+$ ruby anna_found.rb '{ "NUMBER": "2", "UNIT_OF_MEASURE": "miles", "PLACE": "work", "ADJECTIVE": "blue", "NOUN": "rock" }'
+One day Anna was walking her 2 miles commute to work and found a blue rock on the ground.
+```
+
+#### stats.rb
+
+To run get the stats on previous runs, run `stats.rb` like this:
+
+```
+$ ruby stats.rb
+The walks numbers vary between 2 and 2 across 1 trips!
+
+units
+  Least Entered: miles (1 times)
+  Most Entered: miles (1 times)
+  Shortest Entered: miles
+  Longest Entered: miles
+  First Alphabetical Entered: miles
+  Last Alphabetical Entered: miles
+
+places
+  Least Entered: work (1 times)
+  Most Entered: work (1 times)
+  Shortest Entered: work
+  Longest Entered: work
+  First Alphabetical Entered: work
+  Last Alphabetical Entered: work
+
+adjectives
+  Least Entered: blue (1 times)
+  Most Entered: blue (1 times)
+  Shortest Entered: blue
+  Longest Entered: blue
+  First Alphabetical Entered: blue
+  Last Alphabetical Entered: blue
+
+nouns
+  Least Entered: rock (1 times)
+  Most Entered: rock (1 times)
+  Shortest Entered: rock
+  Longest Entered: rock
+  First Alphabetical Entered: rock
+  Last Alphabetical Entered: rock
+
+```
